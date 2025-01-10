@@ -43,9 +43,9 @@ h2{
     box-shadow: 0 0 10px grey;
 
 }
-section:hover{
+/* section:hover{
     box-shadow: 0 0 5px grey;
-}
+} */
 nav{
     padding-top: 15px;
 }
