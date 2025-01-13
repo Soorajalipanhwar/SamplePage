@@ -1,613 +1,1035 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+:root{
+    --color-2: #EFEEFD;
+    --text-color-2:#3C4959;
+    --color-4:#011632;
+    --primary-color:#EFEEFD;
+    --Main-Color: #5951E4;
+    --seconday-color:#321E73;
+    --btn-color:#101465;
+    --BG-Color: #F0F0F0;
+    --Text-Color-1: #000000;
+    --White-color: #FFFFFF;
+    --font: 'Poppins', sans-serif;
+}
+html,body{
+    font-family: 'Poppins', sans-serif !important;
+}
+body{
+    background-color: var(--BG-Color);
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    font-size: 1.5 rem;
+}
+.container{
+    scroll-behavior: smooth;
+}
+.header img{
+    width: 115px;
+    height: 50px;
+}
+#media-image{
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    /* position: fixed; */
+    height: 50px;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+}
+.header:hover{
+    box-shadow: 0 0 10px grey;
 
-    <title>Dental Clinic</title>
-</head>
-<body>
-    <div class="container">
-
-        <header class="header">
-            <img src="assets/shahab1.png" id="logo" alt="">
-            <nav>
-                <ul class="navbar">
-                    <li class="nav-item active"><a href="#Home">Home</a></li>
-                    <li class="nav-item"><a href="#About">About</a></li>
-                    <li class="nav-item"><a href="#Services">Services</a></li>
-                    <li class="nav-item"><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="btns">Book Now</button>
-        </header>
-        
-
-        <section class="page-1">
-            <div class="page-top">
-                
-            <div class="homepage">
-                <h1>Get ready for your best ever dental Experiance</h1>
-                <p>We use only the best quality materials on the market in order to provide the best products to our patients, So don't worry about anything and book yourself.</p>
-                <div class="online">
-                    <button id="online-btn" class="btns">Book an appointment</button>
-                    <span class="ico"><img class="icon" src="assets/blue phone.png" alt=""></span>
-                    <span id="spn"> <h4 id="h4">Online Consultation</h4><p>+92 3088972787</p></span>
-                </div>
-                <div class="profile">
-                    <div class="icons">
-                        <img src="assets/dr shahab.png" alt="">
-                        <span id="description">
-                        <h2>Prof. Dr. Shahab</h2>
-                        <p id="p"><strong>Dental Surgeon</strong></p>
-                        </span>
-                        <img id="linkedin" src="assets/blue linkedin.png" alt="">
-                    </div>
-                    <p id="description-p">Top quality dental treatment done by field experts, highly recommended for everyone.</p>
-                </div>
-            </div>
-            <div class="main-pic">
-                <!-- <div class="outer">
-                    <div class="inner">
-                        <img src="assets/dr shahab.png" alt="">
-                    </div> -->
-                    <img src="assets/animation.png" alt="">
-            </div>
-            </div>
-            <div class="page-bottom">
-                <div class="page-info">
-                    <h1>We're ready Welcoming New patients And can't wait to Meet you.</h1>
-                    <p>We use only the best quality materials on the market in order to provide the best products to our patients, So don't worry about anything and book yourself.</p>
-                    <button class="btns">Submit</button>
-                </div>
-                <div class="page-pic">
-                    <div class="pic-bg"><img src="assets/patients.png" alt="img2">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-2" id="Services">
-            <div class="services-container">
-                <div class="services">
+}
+section:hover{
+    box-shadow: 0 0 5px grey;
+}
+nav{
+    padding-top: 15px;
+}
+.nav-item a{
+    color: var(--text-color-2);
+}
+.active a{
+    color: var(--Main-Color);
+    font-weight: bold;
+}
 
 
-                    <div class="service">
-                        <span id="img"><img src="assets/teeth.png" alt=""></span>
-                        <h2 id="heading2">Root Canal Treatment</h2>
-                        <p id="text">Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/root.png" alt=""></span>
-                        <h2 id="heading2">Cosmetic Dentist</h2>
-                        <p id="text">Cosmetic dentistry is the branch of dentistry that focuses on improving the appearance of your smile.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/tooths.png" alt=""></span>
-                        <h2 id="heading2">Dental Implants</h2>
-                        <p id="text">A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/tooths.png" alt=""></span>
-                        <h2 id="heading2">Dental Implants</h2>
-                        <p id="text">A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/tooths.png" alt=""></span>
-                        <h2 id="heading2">Dental Implants</h2>
-                        <p id="text">A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/tooths.png" alt=""></span>
-                        <h2 id="heading2">Dental Implants</h2>
-                        <p id="text">A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <div class="service">
-                        <span id="img"><img src="assets/tooths.png" alt=""></span>
-                        <h2 id="heading2">Dental Implants</h2>
-                        <p id="text">A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.</p>
-                        <p id="under">Learn More <img id="arrows" src="assets/arrows.png" alt=""></p>
-                    </div>
-                    <!-- <span id="span">
-                        <button class="slide-btn prev-btn">&lt;</button>
-                        <button class="slide-btn next-btn">&gt;</button>
-                    </span> -->
-                </div>    
-            </div>        
-        </section>
 
-        <section class="page-3">
-            <h1 id="h1">Newsletters & Blogs</h1>
-            <p>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
-            <div class="news">
-                
-                <div id="letter-1">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
 
-                        <div class="letter">
-                            <div class="letter-head"></div>
-                            <h3 id="care-btn">button</h3>
-                            <h4>Caring of Teeth 1</h4>
-                            <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                            <span>
-                                <h5>Prof. Dr Shahab</h5>
-                                </span>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        
-                        <div class="letter">
-                            <div class="letter-head"></div>
-                            <h3 id="care-btn">button</h3>
-                            <h4>Caring of Teeth 2</h4>
-                            <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                            <span>
-                                <h5>Prof. Dr Shahab</h5>
-                                </span>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="letter">
-                            <div class="letter-head"></div>
-                            <h3 id="care-btn">button</h3>
-                            <h4>Caring of Teeth</h4>
-                            <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                            <span>
-                                <h5>Prof. Dr Shahab</h5>
-                                </span>3
-                        </div>
-                      </div>
-                    </div>
+.navbar{
+    list-style-type: none;
+}
+.nav-item{
+    margin: 10px;
+}
+#small-btn{
+    display: none;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20px;
+}
+.page-1{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.page-top{
+    display: flex;
+    /* border: 5px solid skyblue; */
+    padding: 5px;
+}
+/* ------------------------page two------------------ */
+.page-2{
+    /* background-color: rgba(255, 0, 0, 0.352); */
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
 
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-                
-                <div id="letter-2">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
+/* .services-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+} */
+.services{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow:hidden;
+    width: 100%;
+}
+.services-container{
+    display: flex;
+    overflow: hidden;
+}
+
+.service{
+    width: 280px;
+    height: 250px;
+    /* border-radius: 10px; */
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    /* display: none; */
+}
+.service:hover{
+    animation: touch 0.1s ease-in forwards;
+    cursor: pointer;
+}
+.service #img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-color: var(--Main-Color);
+    border-radius: 50%;
+}
+#img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#heading2{
+    font-size: 1rem;
+}
+
+#text{
+    text-align: justify;
+    font-size: 0.8rem;
+}
+#under{
+    text-decoration: underline;
+}
+#arrows{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+@keyframes touch {
+    100%{
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px red;
+    }    
+}
+#left,#right{
+    display: block;
+    border: none;
+}
+#left:hover, #right:hover{
+    transform: translateX(2px);
+    cursor: pointer;
+}
+
+
+
+/* ---------------------page3------------------- */
+.page-3{
+    /* border: 5px solid skyblue; */
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#h1{
+    font-family: var(--font) !important;
+    color: rgb(45, 45, 181);
+}
+.letter-head{
+    height: 40%;
+    width: 100%;
+    border: 1px solid blue;
+    border-radius: 5%;
+    background-image: url('assets/tooth.png');
+    background-size: cover;
+    background-position: center;
+}
+.letter{
+    width: 230px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2px grey;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
+    background-color: white;
+}
+#span{
+    display: flex;
+    /* padding-bottom: 5px; */
+    cursor: pointer;
+}
+#span p{
+    font-weight: 18pt;
+    padding:0 10px;
+    margin: 5px;
+    box-shadow: 0 0 2px blueviolet;
+}
+#span p:hover{
+    box-shadow: 0 0 5px var(--Main-Color);
+}
+.letter:hover{
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+}
+.letter *{
+    margin-bottom: 10px;
+}
+#care-btn{
+    background-color: var(--Main-Color);
+    color: white;
+    font-size: 12pt;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+}
+#care-btn:hover{
+    cursor: pointer;
+    transform: translate(0,-2px);
+    box-shadow: 0 0 10px blueviolet;
+}
+
+.letter span{
+    display: flex;
+    width: 100%;
+    height: fit-content;  
+}
+.letter h5{
+    font-size: 12pt;
+    font-weight: bold;
+    margin-left: 40%;
+}
+.news{
+    /* background-color: var(--primary-color); */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.page-4{
+    padding: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid skyblue; */
+    padding: 5px;
+}
+.page4-quote{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page4-quote p{
+    width: 400px;
+    text-align: center;
+}
+.page4-comments{
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+}
+.comments{
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    /* flex-wrap: nowrap; */
+    /* overflow: hidden; */
+    /* border: 1px solid red; */
+}
+.slide-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    /* padding: 10px; */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+.comment{
+    width: 350px;
+    height: fit-content;
+    /* border: 1px solid skyblue; */
+    box-shadow: 0 0 25px rgba(213, 191, 191, 0.42);
+    /* background-color:rgb(0 0 255 / 10%); */
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+.comment-head{
+    width: 100%;
+    height: 25%;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    top: 5%;
+}
+#comment-text{
+    margin-top: 20px;
+    padding-left: 10px;
+    font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Adjust color as needed */
+}
+#comment-p{
+    margin-top: -10px;
+    font-size: 16px;
+    color: goldenrod;
+    letter-spacing: 2px;
+}
+.comment:hover{
+    animation: touch 0.2s ease-in forwards;
+    cursor: pointer;
+}
+.comment-head img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.comment-head span{
+    margin: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+button:hover{
+    box-shadow: 0 0 10px blueviolet;
+    transform: translate(0,-2px);
+    /* animation: btn-anim 2s 0.05s ease-in-out infinite; */
+}
+@keyframes btn-anim {
+    0%{ transform: translateY(-2px);}
+    50%{transform: translateY(2px);}
+    100%{transform: translateY(-2px);}
     
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth 1</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>1
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth 2</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>2
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>3
-                            </div>
-                          </div>
-                        </div>
-    
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
-                </div>
-                  
-                <div id="letter-3">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-    
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth 1</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>1
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth 2</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>2
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="letter">
-                                <div class="letter-head"></div>
-                                <h3 id="care-btn">button</h3>
-                                <h4>Caring of Teeth</h4>
-                                <p>Lorem ipsum dolor, sitting amet consectetur</p>
-                                <span>
-                                    <h5>Prof. Dr Shahab</h5>
-                                    </span>3
-                            </div>
-                          </div>
-                        </div>
-    
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div>
-                </div>
-                  
-            </div>
-        </section>
-
-        <section class="page-4" id="About">
-            <div class="page4-quote">
-                <h1>Our Happy Clients</h1>
-                <p>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
-            </div>
-            <div class="page4-comments">
-                <div class="comments">
-
-                    <div id="comment-1">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-        
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Daniel</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources.</p>
-                                    
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/alina.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Alena Alex</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    2
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas adison.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Edison</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    3
-                                </div>
-                              </div>
-                            </div>
-        
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                    </div>
-
-                    
-                    <div id="comment-2">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/alina.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Alena Alex</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas adison.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Edison</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    2
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                               
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Daniel</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources.</p>
-                                    3
-                                </div>       
-                              </div>
-                            </div>
-        
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                    </div>
-
-                      <div id="comment-3">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas adison.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Edison</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                
-                                
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/thomas.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Thomas Daniel</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources.</p>
-                                    2
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="comment">
-                                    <div class="comment-head">
-                                        <img src="assets/alina.png" alt="">
-                                        <span>
-                                            <h3 id="h4">Alena Alex</h3>
-                                            <p id="comment-p">★★★★<p>
-                                        </span>
-                                    </div>
-                                    <p id="comment-text">Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources. </p>
-                                    3
-                                </div>
-                              </div>
-                            </div>
-        
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                      </div>
-                </div>
-            </div>
-            
-        </section>
-
-        <section class="page-5">
-            <div class="page5-left">
-                <img src="assets/operation.png" alt="">
-            </div>
-            <div class="page5-right">
-                <h2>Why Choose Smile For All Your Dental Treatments?</h2>
-                <p>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
-                <ul>
-                    <li id="li"><i>&#10004; </i> Top quality dental team</li>
-                    <li id="li"><i>&#10004; </i> State of the art dental services</li>
-                    <li id="li"><i>&#10004; </i> Discount in all dental treatments</li>
-                    <li id="li"><i>&#10004; </i> Enrolment is quick and easy</li>
-                </ul>
-                <button class="btns">Get Consultation</button>
-            </div>
-        </section>
-        
-        <section class="page-6">
-            <div class="page6-left">
-                <h2>How To Find Us</h2>
-                <p>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
-                <p><strong>Phone:</strong>+92 300 5640 453</p>
-                <p><strong>Email:</strong> drshahabudindental@gmail.com</p>
-                <p><strong>Address:</strong> 2nd floor , Rafay Mall, Peshawar Road Line #07, <br>
-                    Rawalpindi West Ridge, Pakistan</p>
-                <div class="social-icons">
-                    <a href=""><img src="assets/white facebook.png" alt=""></a>
-                    <a href=""><img src="assets/white insta icon.png" alt=""></a>
-                    <a href=""><img src="assets/white linkedin.png" alt=""></a>
-                    <a href=""><img src="assets/white twitter icon.png" alt=""></a>
-                    <a href=""><img src="assets/white youtube icon.png" alt=""></a>
-                </div>
-            </div>
-            <div class="page6-right" id="Contact">
-                <!-- <h1>Contact Us</h1> -->
-                <form class="contact-form">
-                    <h2>Contact Us</h2>
-                    <div class="form-group">
-                      <input type="text" id="placeholder" name="name" placeholder="Your Name" />
-                      <input type="text" id="placeholder" name="phone" placeholder="Phone Number" />
-                    </div>
-                    <input type="email" id="placeholder" name="email" placeholder="Email" />
-                    <textarea name="message" placeholder="Your Message"></textarea>
-                    <button type="submit" onclick="submit()" id="submit-btn">Submit</button><br><br>
-                    <span id="msg"></span>
-                  </form>
-                  
-            </div>
-        </section>
-
-        <section class="page-7">
-            <div class="map-section">
-                <h2>Our Location</h2>
-                <div class="map-container">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.9252025913847!2d73.01227477401481!3d33.60724514109937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df941577614c63%3A0xab20e5232f8c5568!2sRafay%20Mall!5e0!3m2!1sen!2s!4v1735897993676!5m2!1sen!2s"
-                    allowfullscreen="" loading="lazy">
-                  </iframe>
-                </div>
-              </div>              
-        </section>
-        
-        <footer>
-            <img src="assets/shahab.png" alt="">
-            <p>Copyright &copy; 2024 All rights reserved. | Powered by aibox technologies</p>
-        </footer>
-    </div>
-    <script>
-        function submit() {
-            const inputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
-            inputs.forEach(input => {
-                input.value = '';
-            });
-        }
-    </script>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const commentsContainer = document.querySelector('.comments');
-    const comments = document.querySelectorAll('.comment');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    let currentIndex = 0;
-
-    function updateSlide() {
-        commentsContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+.main-pic{
+    width: 40%;
+    height: 100%;
+    margin:-50px -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-pic img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: 80px;
+    /* margin-right: 90px; */
+}
+.outer{
+    margin: 5%;
+    margin-top: 15%;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 5px dotted var(--Main-Color);
+    /* box-shadow: 0 0 10px var(--Main-Color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: spin 3s ease infinite ; */
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 370px;
+    border:5px dotted var(--Main-Color);
+    /* box-shadow: 0 0 10px var(--Main-Color); */
+    border-radius: 50%;
+    /* animation: spin 3s ease infinite reverse forwards; */
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
     }
+    
+}
+.media-letters{
+    display: none;
+}
+.widescreen{
+    display: flex;
+}
+.homepage{
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    /* border: 2px solid skyblue; */
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    background-color: var(--BG-Color);
+    border-radius: 15%;
+    margin: 10px;
+}
+.profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.online{
+    display: flex;
+    padding: 2px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.ico{
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--Main-Color);
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.online span p,h4{
+    margin-top: -10px;
+}
+#h4{
+    color: var(--Main-Color);
+    font-size: 18pt;
+}
+#p{
+    font-size: small;
+}
+#spn{
+    padding-top: 15px;
+}
+.profile{
+    background-color: var(--White-color);
+    width: 80%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    /* border: 1px solid greenyellow; */
+    background-color: var(--primary-color);
+}
+#id-pic{
+    display: flex;
+    flex-direction: column;
+}
+.icons{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+#description h2{
+    font-size: 22px !important;
+}
+#description{
+    padding-top: 25px;
+    padding-right: 130px;
+    margin: 0;
+    
+}
+#linkedin{
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    margin-top: 25px;
+    border-radius: 3px !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+}
+.page-bottom{
+    width: 100%;
+    height: 60vh;
+    /* background-color: #666666; */
+    display: flex;
+    margin-top: 30px;
+    /* border: 5px solid skyblue; */
+    justify-content: center;
+    align-items: center;
+}
+.bottom-section{
+    display: flex;
+    align-items: center;
+}
+.page-info{
+    display: flex;
+    flex-basis: 65%;
+    /* border: 1px solid skyblue; */
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.page-info h1{
+    /* font-size: 2rem; */
+    margin-bottom: 40px;
+}
+.page-pic{
+    display: flex;
+    flex-basis: 35%;
+    /* border: 1px solid skyblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+button{
+    height: 40px;
+    width: fit-content;
+    background-color: var(--Main-Color);
+    color: white;
+}
 
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = comments.length - 1;
-        }
-        updateSlide();
-    });
+.btns{
+    border-radius: 8px;
+    border: none;
+    padding:0 10px;
+}
+.pic-bg{
+    background-color: var(--primary-color);
+    width: 90%;
+    height: 90%;
+    /* position: relative; */
+    border-radius: 10px;
+}
+.pic-bg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 20px -20px;
+    box-shadow: 0 0 5px 5px grey;
+}
+/* -----------------------page 5------------------------------- */
 
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < comments.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateSlide();
-    });
-});
-    </script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+.page-5{
+    display: flex;
+    height: 80vh;
+    background-color: var(--primary-color);
+}
+.page5-left{
+    flex-basis: 50%;
+    /* background-color:plum; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page5-left img{
+    width: 360px;
+    height: 300px;
+    padding-bottom: 0;
+}
+.page5-right{
+    flex-basis: 50%;
+    /* background-color:lightpink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+#li i{
+    color: var(--Main-Color);
+    margin-right: 5px;
+}
+.page5-right ul li{
+    position: relative;
+    list-style: none;
+    margin-left: -40px;
+}
+/* ------------page 6 ----------------- */
+.page-6{
+    display: flex;
+    padding: 10px;
+    height: fit-content;
+}
+.page6-left{
+    flex-basis: 50%;
+    padding: 5px;
+}
+.page6-right{
+    flex-basis: 50%;
+    padding: 5px;
+}
+.social-icons img{
+    /* display: flex;
+    flex-direction: column; */
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid red; */
+    background-color: #011632;
+    margin: 2px;
+    border-radius: 50%;
+    padding: 2px;
+}
+.social-icons img:hover{
+    box-shadow: 0 0 10px red;
+}
+.contact-form {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  #msg{
+    color: green;
+    padding: 10px ;
+    border-radius: 10px;
+  }
+  #msg:hover{
+    cursor: pointer;
+    width: fit-content;
+    box-shadow: 0 0 10px red;
+  }
+  .contact-form h2,.page6-left h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+  }
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder { /* Chrome, Edge, Safari */
+    color: #6c63ff; /* Gray color for placeholder */
+    /* font-weight: bold; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Regular */
+}
+  
+  
+  .contact-form .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #6c63ff;
+    /* box-shadow: 0 0 5px #6c63ff; */
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #4a4aff;
+  }
+  
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+    margin-top: 10px;
+  }
+  
+  .contact-form button {
+    width: 40%;
+    padding: 12px 0;
+    background-color: #6c63ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #4a4aff;
+  }
+
+
+
+  /* ------------------------------------------------------- */
+
+  /* Map Section Styling */
+.map-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+}
+  
+.map-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+  /* Map Container Styling */
+.map-container {
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid #6c63ff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1.5px solid var(--Main-Color);
+}
+footer img{
+    width: 150px;
+    height: 50px;
+}
+/* --------------------------------media query for mobile------------------------- */
+@media only screen and (max-width: 600px) {
+    html,body{
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+    }
+    .container{
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        padding: 0 10px;
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        height: 10vh;
+    }
+    #logo{
+        margin-left: 6rem;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: -150%;
+        z-index: 200;
+        height: 100%;
+        padding-top: 50px;
+        background: linear-gradient(145deg,red,transparent);
+    }
+    .navbar{
+        flex-direction: column;
+        font-size: 4rem;
+        background-color: #efeefda2;
+        border: 1px solid red;
+        height: 100%;
+        margin-top: 4rem;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    .nav-item{
+        margin: 10px;
+    }
+    #small-btn{
+        display: block;
+        border-radius: 10px;
+        width: 5rem;
+        height: auto;
+        z-index: 300;
+        position: fixed;
+        top: 30px;
+        left: 30px;
+    }
+    #small-btn img{
+        width: 100%;
+        height: 100%;
+    }
+    #small-btn:hover,#small-btn:focus{
+        border: 3px solid red;
+    }
+    .homepage{
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+    }
+    .profile{
+        width: 100%;
+    }
+    #online-btn{
+        margin-right: 2rem;
+    }
+    .main-pic{
+        display: none;
+    }
+    .page-bottom{
+        height: 100vh;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 90%;
+        margin-left: 3rem;
+    }
+    .page-info{
+        width: 100%;
+        height: 50vh;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .page-pic{
+        width: 80%;
+        height: 70vh;
+        padding: 10px;
+    }
+    .page-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        width: 90%;
+    }
+    .services-container{
+        width: 100%;
+        /* height: 100vh; */
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: nowrap; */
+        /* overflow: hidden; */
+    }
+    .service{
+        width: 90%;
+        height: 80vh;
+        padding: 30px;
+    }
+    .service #img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    #heading2{
+        font-size: 3rem;
+    }
+    #text,#under{
+        font-size: 2rem;
+    }
+    .page4-comments{
+        width: 50%;
+        width: 90%;
+        background-color: var(--primary-color);
+    }
+    .news{
+        width: 90%;
+        height: 100vh;
+        background-color: var(--primary-color);
+    }
+    .page-5{
+        background-color: transparent;
+    }
+    .page5-left,.page5-right{
+        width: 90%;
+        background-color: var(--primary-color);
+    }
+    #letter-1,#letter-2,#letter-3{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .media-letters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .widescreen{
+        display: none;
+    }
+    .letter{
+        width: 80%;
+        height: 500px;
+    }
+    .page-5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .page-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .page6-left{
+        width: 90%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        /* padding: 10rem; */
+        padding: 70px;
+        margin-top: 10rem;
+        background-color: var(--primary-color);
+    }
+    .page6-left h2{
+        font-size: 1.5rem;
+        position: relative;
+    }
+    .contact-form{
+        position: relative;
+        left: -150px;
+        height: 50vh;
+    }
+    .page6-right{
+        height: 80vh;
+        width: 90%;
+        background-color: var(--primary-color);
+        margin-bottom: 3rem;
+    }
+    .map-div{
+        height: 100%;
+        width: 90%;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .page-7{
+        width: 100%;
+        height: 50vh;
+    }
+    .form-group{
+        flex-direction: column;
+    }
+    .map-section{
+        height: 50vh;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+    }
+    .map-container{
+        height: 80%;
+    }
+    .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+    #letter-1,#letter-2,#comment-1,#comment-2{
+        display: none;
+    }
+}
